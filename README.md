@@ -30,3 +30,10 @@ python 가상환경 deactivate
 
     deactivate
 
+참고.특정문자열 검색 (KEY 저장여부 확인시)
+
+    grep -rni "0x" .
+
+    -r : 하위 디렉토리를 포함하여 디렉토리 내의 모든 파일을 재귀적으로 검색 (--recursive)
+    -n : 출력 행과 함께 행 번호 표시 (--line-number)
+    -i : 대소문자 구분하지 않음 (-ignore)
