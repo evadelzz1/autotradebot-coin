@@ -1,19 +1,32 @@
 # Auto Trading Bot
 
-echo "UPBIT_ACCESS_KEY=..." >> .env
-echo "UPBIT_SECRET_KEY=..." >> .env
+소스코드 다운로드
 
-python -m venv .venv
+    git clone https://github.com/evadelzz1/autotradebot-coin.git
 
-echo '.env'  >> .gitignore
-echo '.venv' >> .gitignore
 
-ls -la
+python 가상환경 activate 및 필요한 라이브러리 설치
 
-source .venv/bin/activate
+    cd ./autotradebot-coin
 
-pip install -r requirements.txt
+    pyenv versions
 
-python main.py
+    pyenv local 3.11.6
 
+    python -m venv .venv
+
+    source .venv/bin/activate
+
+    pip install -r requirements.txt
+
+코드 실행
+
+    echo "UPBIT_ACCESS_KEY=..." >> .env
+    echo "UPBIT_SECRET_KEY=..." >> .env
+
+    python ./source/....py
+
+python 가상환경 deactivate
+
+    deactivate
 
