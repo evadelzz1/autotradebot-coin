@@ -1,4 +1,4 @@
-# Auto Trading Bot
+# AutoTrading Bot
 
 소스코드 다운로드
 
