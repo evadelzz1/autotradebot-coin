@@ -1,13 +1,15 @@
 import pyupbit
 
-df = pyupbit.get_ohlcv("KRW-ETH", "day", 10)
-#df = pyupbit.get_ohlcv(ticker="KRW-BTC", interval="day", count=10)
+data = pyupbit.get_ohlcv("KRW-ETH", "day", 10)
+#data = pyupbit.get_ohlcv(ticker="KRW-BTC", interval="day", count=10)
 
 print(f'\n======================== raw data (all) ========================')
-print(df)
+print(data)
+
+df = data[["close", "volume"]]
 
 print(f'\n==================== raw data (close, volume) ===================')
-print(df[["close", "volume"]])
+print(df)
 
 print(f'\n==================== closed mean (by pandas) ====================')
 print('mean     : ', df['close'].mean())

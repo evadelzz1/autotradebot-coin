@@ -1,15 +1,15 @@
 import pyupbit
 
-df = pyupbit.get_ohlcv(
+data = pyupbit.get_ohlcv(
     ticker="KRW-ETH",
     interval="minute1",
     count=20,
     # to="20240501 00:00:00",
     period=0.1)
 
-print(len(df), type(df), df.shape)
-print(df.columns)
-print(df)
+print(len(data), type(data), data.shape)
+print(data.columns)
+print(data)
 
 # #########################################################
 # pyupbit.get_ohlcv() : 분봉 데이터 조회

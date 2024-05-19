@@ -1,17 +1,17 @@
 import pyupbit
 
-df = pyupbit.get_ohlcv(ticker="KRW-ETH", interval="minute1", count=60)
+data = pyupbit.get_ohlcv(ticker="KRW-ETH", interval="minute1", count=60)
 
 resampleInterval = '2min'
 
-df['open'] = df['open'].resample(resampleInterval).first()
-df['high'] = df['high'].resample(resampleInterval).max()
-df['low'] = df['low'].resample(resampleInterval).min()
-df['close'] = df['close'].resample(resampleInterval).last()
-df['volume'] = df['volume'].resample(resampleInterval).sum()
-df = df.dropna()
+data['open'] = data['open'].resample(resampleInterval).first()
+data['high'] = data['high'].resample(resampleInterval).max()
+data['low'] = data['low'].resample(resampleInterval).min()
+data['close'] = data['close'].resample(resampleInterval).last()
+data['volume'] = data['volume'].resample(resampleInterval).sum()
+data = data.dropna()
 
-print(df)
+print(data)
 
 
 # 리샘플링 (resample) : https://wikidocs.net/158101

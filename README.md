@@ -24,7 +24,9 @@ python 가상환경 activate 및 필요한 라이브러리 설치
     echo "UPBIT_ACCESS_KEY=..." >> .env
     echo "UPBIT_SECRET_KEY=..." >> .env
 
-    python ./source/....py
+    chmod +x run.sh
+
+    sh ./run.sh
 
 python 가상환경 deactivate
 

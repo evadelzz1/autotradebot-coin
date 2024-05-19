@@ -9,9 +9,9 @@ if not load_dotenv():    # load .env
 upbit_access_key = os.getenv("UPBIT_ACCESS_KEY")
 upbit_secret_key = os.getenv("UPBIT_SECRET_KEY")
 
-dispUpbitKeys = True
+isDisplayUpbitKey = os.getenv("isDisplayUpbitKey")
 
-if dispUpbitKeys:
+if isDisplayUpbitKey == "True":
     print('=' * 70)
     print(f'### [Config Upbit] ACCESS_KEY: {upbit_access_key[0:10]}...')
     print(f'### [Config Upbit] SECRET_KEY: {upbit_secret_key[0:10]}...')

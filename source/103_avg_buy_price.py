@@ -1,5 +1,5 @@
-from ConfigUpbit import upbit
 import pyupbit
+from ConfigUpbit import upbit
 
 #-- 토큰의 현재 가격 조회 (get_current_price) ------------------------------------------
 
