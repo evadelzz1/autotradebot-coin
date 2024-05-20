@@ -3,3 +3,4 @@ pyupbit
 matplotlib
 numpy
 pandas
+openpyxl
